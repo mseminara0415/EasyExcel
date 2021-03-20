@@ -13,6 +13,14 @@ class EasyExcel:
 
     @staticmethod
     def initialize_excel(visible: bool, display_alerts: bool, screen_updating: bool, enable_events: bool):
+        """
+        Initialize Pywin Excel application.
+        :param visible:
+        :param display_alerts:
+        :param screen_updating:
+        :param enable_events:
+        :return:
+        """
         # Set up Excel Workbook
         try:
             excel = win32.gencache.EnsureDispatch('Excel.Application')
@@ -43,6 +51,10 @@ class EasyExcel:
 
     @property
     def sheets(self):
+        """
+        Get all sheets within workbook.
+        :return:
+        """
         return [sheet for sheet in self.wb.Sheets]
 
     def color_scale(self, worksheet: str, cell_range_start=None,
@@ -81,6 +93,13 @@ class EasyExcel:
             sheet.Range(f"{cell_range_start}").HorizontalAlignment = -4108
 
     def bold_cells(self, worksheet, cell_range_start=None, cell_range_end=None):
+        """
+        Bold selected cell range.
+        :param worksheet:
+        :param cell_range_start:
+        :param cell_range_end:
+        :return:
+        """
 
         sheet = self.wb.Worksheets(worksheet)
 
@@ -93,8 +112,11 @@ class EasyExcel:
 
         working_range.Font.Bold = True
 
-
     def close_workbook(self):
+        """
+        Close and Save workbook.
+        :return:
+        """
         self.wb.Close(True)
         self.wb = None
         self.excel = None
