@@ -59,6 +59,13 @@ class EasyExcel:
 
     def color_scale(self, worksheet: str, cell_range_start=None,
                     cell_range_end=None):
+        """
+        Add in color scale for selected range.
+        :param worksheet:
+        :param cell_range_start:
+        :param cell_range_end:
+        :return:
+        """
 
         sheet = self.wb.Worksheets(worksheet)
 
