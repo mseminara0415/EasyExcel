@@ -1,3 +1,7 @@
+"""
+EasyExcel is currently in-progress..
+"""
+
 import win32com.client as win32
 import os
 import re
@@ -8,7 +12,6 @@ import shutil
 class EasyExcel:
     """
     EasyExcel acts as a wrapper for Pywin32, allowing for straight forward Excel editing/formatting.
-
     """
 
     @staticmethod
