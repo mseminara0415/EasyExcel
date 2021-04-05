@@ -22,7 +22,7 @@ class EasyExcel:
     @staticmethod
     def initialize_excel(visible: bool, display_alerts: bool, screen_updating: bool, enable_events: bool):
         """
-        Iniitialize Excel Object. User can set the parameters to determine if the process is visible or not.
+        Initialize Excel Object. User can set the parameters to determine if the process is visible or not.
         :param visible:
         :param display_alerts:
         :param screen_updating:
